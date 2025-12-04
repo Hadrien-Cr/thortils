@@ -9,7 +9,7 @@ setup(
     version="0.1",
     description="Code related to Ai2-Thor. Try to do one thing once.",
     python_requires=">3.6",
-    install_requires=["numpy", "matplotlib", "ai2thor==5.0.0", "open3d", "tqdm"],
+    install_requires=["numpy", "matplotlib", "ai2thor", "open3d", "tqdm"],
     license="MIT",
     author="Kaiyu Zheng",
     author_email="kaiyutony@gmail.com",
