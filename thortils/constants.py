@@ -76,7 +76,7 @@ EXCLUDED_RECEPTACLES=[]   # not actually used
 
 #-------------------------------------------------------------------------------
 # What scenes are we using
-from thortils.scene import ithor_scene_names
+
 LEVELS = {
     "kitchen": [i for i in range(1, 31)],
     "living_room": [i for i in range(1, 31)],
@@ -84,15 +84,18 @@ LEVELS = {
     "bathroom": [i for i in range(1, 31)],
 }
 SCENE_TYPES = list(LEVELS.keys())
-KITCHEN_TRAIN_SCENES = ithor_scene_names("kitchen", range(1,21))
-KITCHEN_VAL_SCENES   = ithor_scene_names("kitchen", range(21,31))
-LIVING_ROOM_TRAIN_SCENES = ithor_scene_names("living_room", range(1,21))
-LIVING_ROOM_VAL_SCENES   = ithor_scene_names("living_room", range(21,31))
-BEDROOM_TRAIN_SCENES = ithor_scene_names("bedroom", range(1,21))
-BEDROOM_VAL_SCENES   = ithor_scene_names("bedroom", range(21,31))
-BATHROOM_TRAIN_SCENES = ithor_scene_names("bathroom", range(1,21))
-BATHROOM_VAL_SCENES   = ithor_scene_names("bathroom", range(21,31))
 
+KITCHEN_TRAIN_SCENES = [f"FloorPlan{i}" for i in range(1, 21)]
+KITCHEN_VAL_SCENES = [f"FloorPlan{i}" for i in range(21, 31)]
+
+LIVING_ROOM_TRAIN_SCENES = [f"FloorPlan{200 + i}" for i in range(1, 21)]
+LIVING_ROOM_VAL_SCENES = [f"FloorPlan{200 + i}" for i in range(21, 31)]
+
+BEDROOM_TRAIN_SCENES = [f"FloorPlan{300 + i}" for i in range(1, 21)]
+BEDROOM_VAL_SCENES = [f"FloorPlan{300 + i}" for i in range(21, 31)]
+
+BATHROOM_TRAIN_SCENES = [f"FloorPlan{400 + i}" for i in range(1, 21)]
+BATHROOM_VAL_SCENES = [f"FloorPlan{400 + i}" for i in range(21, 31)]
 
 #-------------------------------------------------------------------------------
 # Defines what objects the agent is able to interact with, and the corresponding
