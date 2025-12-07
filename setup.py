@@ -5,7 +5,8 @@ import os
 
 setup(
     name="thortils",
-    packages=find_packages(),
+    packages=find_packages(where="."),
+    package_dir={"": "."},
     version="0.1",
     description="Code related to Ai2-Thor. Try to do one thing once.",
     python_requires=">3.6",
